@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="ShinxAdventures"
 run/main_scene="res://GameScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://images/Shinx1.png"
 
 [rendering]
 

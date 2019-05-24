@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shinx2.png-32fb7a60fc74137082b5f1afffd88b7b.stex"
+path="res://.import/FloorSideDoor.png-1fce3ee9c0a422f3b83945266f648cc4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/images/Shinx2.png"
-dest_files=[ "res://.import/Shinx2.png-32fb7a60fc74137082b5f1afffd88b7b.stex" ]
+source_file="res://images/FloorSideDoor.png"
+dest_files=[ "res://.import/FloorSideDoor.png-1fce3ee9c0a422f3b83945266f648cc4.stex" ]
 
 [params]
 

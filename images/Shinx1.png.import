@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CeilingWithSideWall.png-aefe4ced2ae715d30572970cf327f42b.stex"
+path="res://.import/Shinx1.png-6d0ef03285b47d43667956ea1f56d321.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/images/CeilingWithSideWall.png"
-dest_files=[ "res://.import/CeilingWithSideWall.png-aefe4ced2ae715d30572970cf327f42b.stex" ]
+source_file="res://images/Shinx1.png"
+dest_files=[ "res://.import/Shinx1.png-6d0ef03285b47d43667956ea1f56d321.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shinx1.png-41dad07f5ac14f09972d36f5d35b0d4c.stex"
+path="res://.import/CeilingWithLight.png-2cfa957de8c36b2367854b88130b3b48.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/images/Shinx1.png"
-dest_files=[ "res://.import/Shinx1.png-41dad07f5ac14f09972d36f5d35b0d4c.stex" ]
+source_file="res://images/CeilingWithLight.png"
+dest_files=[ "res://.import/CeilingWithLight.png-2cfa957de8c36b2367854b88130b3b48.stex" ]
 
 [params]
 
