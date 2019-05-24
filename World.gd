@@ -117,18 +117,19 @@ func remove_blocks_outside_bounds() :
 	var removeList = {}
 	for key in blocks :
 		if (!bounds.has_point(key)) :
+			#Really need to make sure the names are not subsets of each other.
 			if (blocks[key].name.find("EmptyFloor")>-1):
 				unusedEmptyFloor.append(blocks[key])
 			elif (blocks[key].name.find("CeilingWithLight")>-1):
 				unusedCeilingWithLight.append(blocks[key])
-			elif (blocks[key].name.find("Door")>-1):
-				unusedDoor.append(blocks[key])
 			elif (blocks[key].name.find("CeilingBlank")>-1):
 				unusedCeilingBlank.append(blocks[key])
 			elif (blocks[key].name.find("CeilingWithSideWall")>-1):
 				unusedCeilingWithSideWall.append(blocks[key])
 			elif (blocks[key].name.find("FloorWithSideDoor")>-1):
 				unusedFloorWithSideDoor.append(blocks[key])
+			elif (blocks[key].name.find("Door")>-1):
+				unusedDoor.append(blocks[key])
 			removeList[key] = blocks[key];
 			
 	for key in removeList :

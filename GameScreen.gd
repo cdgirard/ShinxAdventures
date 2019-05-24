@@ -14,7 +14,7 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = Shinx.instance()
-	var blockLoc = Vector2(600,1000)
+	var blockLoc = Vector2(600,950)
 	player.position = blockLoc
 	add_child(player)
 	world = World.instance()
