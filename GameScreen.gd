@@ -3,6 +3,9 @@ extends Node
 
 onready var World = preload("res://World.tscn")
 onready var Shinx = preload("res://objs//Shinx.tscn")
+#For Testing Only
+onready var Ball = preload("res://objs//Ball.tscn")
+onready var Hammer = preload("res://objs//Hammer.tscn")
 
 
 var world
@@ -19,6 +22,15 @@ func _ready():
 	add_child(player)
 	world = World.instance()
 	add_child(world)
+	#Only for testing the objects
+	var ball = Ball.instance()
+	var ballLoc = Vector2(800,950)
+	ball.position = ballLoc
+	add_child(ball)
+	var hammer = Hammer.instance()
+	var hammerLoc = Vector2(500,950)
+	hammer.position = hammerLoc
+	add_child(hammer)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
