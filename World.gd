@@ -103,7 +103,7 @@ func update_map() :
 	info.unlock()
 
 func get_player() :
-	return get_parent().get_child(0).position
+	return Shinx.position
 
 func compute_bounds() :
 	var pos = get_player() #Location of the player, assumes it is child zero.

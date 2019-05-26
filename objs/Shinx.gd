@@ -1,10 +1,15 @@
 extends KinematicBody2D
 
+var camera
+
 var run_speed = 50
 var jump_speed = -750
 var gravity = Vector2(0,30)
 var facing_right = true
 var velocity = Vector2()
+
+func _ready() :
+	camera = get_node("Camera2D")
 
 func get_input():
 	velocity.x = 0
@@ -21,10 +26,10 @@ func get_input():
 	if left:
 		velocity.x -= run_speed
 		move_and_slide(velocity)
+	
 
 func _physics_process(delta):
 	if !is_on_floor() :
-		#print("Gravity")
 		move_and_slide(gravity)
 	get_input()
 	

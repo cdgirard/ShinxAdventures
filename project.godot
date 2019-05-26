@@ -19,6 +19,10 @@ config/name="ShinxAdventures"
 run/main_scene="res://GameScreen.tscn"
 config/icon="res://images/Shinx1.png"
 
+[autoload]
+
+Shinx="*res://objs/Shinx.tscn"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
