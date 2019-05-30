@@ -12,10 +12,12 @@ func _ready():
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
 		self.on_click(event.position)
-		print(Shinx.camera.get_camera_position()," : ",viewport.size)
+		#print(Shinx.camera.get_camera_position()," : ",viewport.size)
+		#print(to_global(position))
+		
 		var modX = event.position.x + Shinx.camera.get_camera_position().x - viewport.size.x/2
 		var modY = event.position.y + Shinx.camera.get_camera_position().y - viewport.size.y/2
-		print(modX," : ",modY)
+		#print(modX," : ",modY)
 		var impulse = Vector2((position.x - modX)*5,(position.y - modY)*10)
 		apply_central_impulse(impulse)
 		
@@ -23,7 +25,7 @@ func _input_event(viewport, event, shape_idx):
 func on_click(pos):
 	var xDiff = pos.x - position.x
 	var yDiff = pos.y - position.y
-	print(pos, " : ",position)
+	#print(pos, " : ",position)
 
 #func _input(event):
 #   # Mouse in viewport coordinates

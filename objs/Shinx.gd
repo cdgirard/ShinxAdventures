@@ -11,6 +11,19 @@ var velocity = Vector2()
 func _ready() :
 	camera = get_node("Camera2D")
 
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
+		var arm = get_node("Arm")
+		arm.rotate(arm.get_angle_to(get_global_mouse_position())+PI/2)
+		
+		var viewport = get_viewport()
+		var modX = event.position.x + Shinx.camera.get_camera_position().x - viewport.size.x/2
+		var modY = event.position.y + Shinx.camera.get_camera_position().y - viewport.size.y/2
+		print("arm: ",modX," : ",modY)
+		var offset = Vector2((modX - (position.x + arm.position.x)),(modY - (position.y + arm.position.y)))
+		print(offset)
+		arm.translate(offset)
+
 func get_input():
 	velocity.x = 0
 	var right = Input.is_action_pressed('ui_right')
@@ -26,6 +39,9 @@ func get_input():
 	if left:
 		velocity.x -= run_speed
 		move_and_slide(velocity)
+	
+	#if Input.is_mouse_button_pressed(BUTTON_LEFT) :
+	#	print("clicked")
 	
 
 func _physics_process(delta):

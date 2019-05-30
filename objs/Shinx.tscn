@@ -2,9 +2,7 @@
 
 [ext_resource path="res://objs/Shinx.gd" type="Script" id=1]
 [ext_resource path="res://images/Shinx2.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 28.9254, 55.6426 )
+[ext_resource path="res://images/Arm.png" type="Texture" id=3]
 
 [node name="Shinx" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -12,9 +10,22 @@ script = ExtResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -2.19443, 3.17556, -19.5535, -18.0127, -20.3193, -34.606, -6.27892, -52.2203, 9.80376, -55.7942, 10.5696, -38.9457, 22.0572, -33.0743, 28.4392, -21.5867, 28.4392, -10.8649, 22.3125, -0.398369, 13.8882, 4.70724, 20.2703, 54.9975, -8.83171, 54.9483, -24.4038, 45.8074, -30.5306, 31.0011, -30.2753, 19.5135, -24.9144, 9.047, -17.7665, 5.2178, -14.1926, 7.77061, -16.7454, 31.2564, -12.9162, 40.1912, -7.55531, 42.4887 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Arm" type="KinematicBody2D" parent="."]
+position = Vector2( 60, 20 )
+rotation = 0.610865
+
+[node name="Sprite" type="Sprite" parent="Arm"]
+position = Vector2( 0, -10 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arm"]
+position = Vector2( 0, -10 )
+polygon = PoolVector2Array( -1.05565, -1.21971, -3.55914, -5.57506, -1.32962, -12.0139, 1.95796, -11.6304, 3.32779, -4.34291, 0.740311, -1.00688, 1.79358, 9.90327, -1.27483, 11.9306, -3.083, 9.57452 )
 

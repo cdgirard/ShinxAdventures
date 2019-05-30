@@ -3,7 +3,7 @@
 [ext_resource path="res://images/FloorBlank.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26.5653, 7.0812 )
+extents = Vector2( 26.5653, 6.94663 )
 
 [node name="EmptyFloor" type="Sprite"]
 texture = ExtResource( 1 )
@@ -12,6 +12,6 @@ texture = ExtResource( 1 )
 position = Vector2( 0, 42.2716 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -0.343071, -0.592606 )
+position = Vector2( -0.343, -0.25 )
 shape = SubResource( 1 )
 
