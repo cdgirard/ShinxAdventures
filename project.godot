@@ -23,6 +23,10 @@ config/icon="res://images/Shinx1.png"
 
 Shinx="*res://objs/Shinx.tscn"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "codeandweb.texturepacker" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

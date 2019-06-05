@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ArmAnimation.tres" type="SpriteFrames" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Swat"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 45.0, 90.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( 30, 30 ), Vector2( 10, 80 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -53.0488, -15.5424, -61.1542, -31.2128, -51.968, -59.3116, -38.9994, -56.6098, -34.1362, -30.1321, -46.0241, -12.3002, -40.6205, 28.2268, -50.8873, 35.7918, -60.6138, 26.6057 ), PoolVector2Array( -53.0488, -15.5424, -61.1542, -31.2128, -64.5633, -70.9125, -25.5899, -71.6767, -34.1362, -30.1321, -46.0241, -12.3002, -40.6205, 28.2268, -50.8873, 35.7918, -60.6138, 26.6057 ), PoolVector2Array( -53.0488, -15.5424, -61.1542, -31.2128, -64.5633, -70.9125, -25.5899, -71.6767, -34.1362, -30.1321, -46.0241, -12.3002, -40.6205, 28.2268, -50.8873, 35.7918, -60.6138, 26.6057 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../AnimatedSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "swat"
+frame = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 30, 30 )
+rotation = 0.785398
+polygon = PoolVector2Array( -53.0488, -15.5424, -61.1542, -31.2128, -64.5633, -70.9125, -25.5899, -71.6767, -34.1362, -30.1321, -46.0241, -12.3002, -40.6205, 28.2268, -50.8873, 35.7918, -60.6138, 26.6057 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionPolygon2D"]
+anims/Swat = SubResource( 1 )
+

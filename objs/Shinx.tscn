@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objs/Shinx.gd" type="Script" id=1]
 [ext_resource path="res://images/Shinx2.png" type="Texture" id=2]
-[ext_resource path="res://images/Arm.png" type="Texture" id=3]
+[ext_resource path="res://objs/Arm.gd" type="Script" id=3]
+[ext_resource path="res://images/Arm.png" type="Texture" id=4]
 
 [node name="Shinx" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -19,11 +20,12 @@ current = true
 [node name="Arm" type="KinematicBody2D" parent="."]
 position = Vector2( 60, 20 )
 rotation = 0.610865
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Arm"]
 position = Vector2( 0, -10 )
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arm"]
 position = Vector2( 0, -10 )

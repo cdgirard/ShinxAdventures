@@ -8,8 +8,8 @@ extends RigidBody2D
 func _ready():
 	pass # Replace with function body.
 
-#Need to figure out how to get access to the camera, need to make it a global.
-func _input_event(viewport, event, shape_idx):
+#Keeping this code for now, but likely removing from objects.
+func old_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
 		self.on_click(event.position)
 		#print(Shinx.camera.get_camera_position()," : ",viewport.size)

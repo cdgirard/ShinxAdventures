@@ -6,6 +6,7 @@ onready var World = preload("res://World.tscn")
 #For Testing Only
 onready var Ball = preload("res://objs//Ball.tscn")
 onready var Hammer = preload("res://objs//Hammer.tscn")
+onready var ArmAnim = preload("res://ArmAnimation.tscn")
 
 
 var world
@@ -17,6 +18,9 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#player = Shinx.instance()
+	var armA = ArmAnim.instance()
+	armA.position = Vector2(600,800)
+	add_child(armA)
 	var blockLoc = Vector2(600,950)
 	Shinx.position = blockLoc
 	add_child(Shinx)
