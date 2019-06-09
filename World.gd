@@ -10,6 +10,8 @@ onready var EmptyFloor = preload("res://objs/EmptyFloor.tscn")
 onready var FloorWithSideDoor= preload("res://objs/FloorWithSideDoor.tscn")
 onready var Door = preload("res://objs/Door.tscn")
 
+
+
 var tileWidth = 54
 var tileHeight = 98
 

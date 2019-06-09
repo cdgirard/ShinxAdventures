@@ -8,6 +8,7 @@ onready var Ball = preload("res://objs//Ball.tscn")
 onready var Hammer = preload("res://objs//Hammer.tscn")
 onready var ArmAnim = preload("res://ArmAnimation.tscn")
 
+var swat = false
 
 var world
 var player
@@ -19,7 +20,7 @@ var player
 func _ready():
 	#player = Shinx.instance()
 	var armA = ArmAnim.instance()
-	armA.position = Vector2(600,800)
+	armA.position = Vector2(600,750)
 	add_child(armA)
 	var blockLoc = Vector2(600,950)
 	Shinx.position = blockLoc
@@ -36,6 +37,17 @@ func _ready():
 	hammer.position = hammerLoc
 	add_child(hammer)
 
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
+		var node = get_child(0)
+		var anim = node.get_node("CollisionPolygon2D/AnimationPlayer")
+		if swat :
+			anim.stop()
+			swat = false
+		else :
+			anim.play("Swat")
+			swat = true
+		print(anim)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

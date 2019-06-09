@@ -60,12 +60,9 @@ tracks/3/keys = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "swat"
-frame = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 30, 30 )
-rotation = 0.785398
-polygon = PoolVector2Array( -53.0488, -15.5424, -61.1542, -31.2128, -64.5633, -70.9125, -25.5899, -71.6767, -34.1362, -30.1321, -46.0241, -12.3002, -40.6205, 28.2268, -50.8873, 35.7918, -60.6138, 26.6057 )
+polygon = PoolVector2Array( -53.0488, -15.5424, -61.1542, -31.2128, -51.968, -59.3116, -38.9994, -56.6098, -34.1362, -30.1321, -46.0241, -12.3002, -40.6205, 28.2268, -50.8873, 35.7918, -60.6138, 26.6057 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionPolygon2D"]
 anims/Swat = SubResource( 1 )
